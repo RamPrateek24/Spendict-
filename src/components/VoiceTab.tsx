@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, JSX } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { saveExpense } from "../../lib/expenses"
 import { predictCategory } from "../utils/predictCategory"
 
@@ -58,7 +58,7 @@ export default function VoiceTab() {
       return
     }
     setTranscript("")
-    setState({ isRecording: true, seconds: 0, showResult: false, isProcessing: false })
+    setState({ isRecording: true, seconds: 0, showResult: false, isProcessing: false, confirmingSave: false, saveStatus: 'idle', saveError: '' })
     const SpeechRecognition =
       (window as any).SpeechRecognition ||
       (window as any).webkitSpeechRecognition
@@ -86,8 +86,6 @@ export default function VoiceTab() {
       console.log("Transcript:", speechText)
 
       setTranscript(speechText)
-
-      const amount = extractAmount(speechText)
 
       // 🧠 ML category prediction
       const category = await predictCategory(speechText)

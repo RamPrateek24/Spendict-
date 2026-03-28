@@ -1,17 +1,8 @@
 import React, { useRef, useState } from 'react'
-import type { UploadedFile, ParsedExpense } from '../types'
+import type { ParsedExpense } from '../types'
 import Tesseract from 'tesseract.js'
 import { saveExpense } from "../../lib/expenses"
 import { predictCategory } from "../utils/predictCategory"
-
-
-const MOCK_RESULT: ParsedExpense = {
-  merchant: 'Reliance Fresh',
-  date: '17 Feb 2026',
-  amount: '₹ 1,240.50',
-  category: '🛒 Groceries',
-  tax: '₹ 88.50',
-}
 
 export default function ImageUploadTab(): React.ReactElement {
   const inputRef = useRef<HTMLInputElement>(null)

@@ -5,20 +5,6 @@ import { predictCategory } from "../utils/predictCategory"
 
 const QUICK_TAGS = ['🛒 Groceries', '🍕 Food', '🚕 Transport', '💊 Health', '🎬 Entertainment']
 
-const CATEGORY_MAP: Record<string, string> = {
-  groceries: '🛒 Groceries', food: '🍕 Food & Dining', restaurant: '🍕 Food & Dining',
-  pizza: '🍕 Food & Dining', uber: '🚕 Transport', transport: '🚕 Transport',
-  cab: '🚕 Transport', health: '💊 Health', gym: '🏋️ Fitness',
-  medicine: '💊 Health', movie: '🎬 Entertainment', entertainment: '🎬 Entertainment',
-  shopping: '🛍️ Shopping',
-}
-
-const detectCategory = (text: string) => {
-  const lower = text.toLowerCase()
-  for (const [k, v] of Object.entries(CATEGORY_MAP)) if (lower.includes(k)) return v
-  return '🏷️ Auto-detected'
-}
-
 const extractAmount = (text: string) => {
   const m = text.match(/[₹$]?\s?(\d[\d,.]+)/)
   return m ? `₹ ${parseFloat(m[1].replace(/,/g, '')).toFixed(2)}` : '—'
@@ -30,7 +16,6 @@ export default function TextTab(): React.ReactElement {
   const [parsing, setParsing] = useState(false)
   const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'success' | 'error'>('idle')
   const [saveError, setSaveError] = useState<string | null>(null)
-  const [confirmingSave, setConfirmingSave] = useState(false)
 
   const submit = async () => {
     if (!input.trim()) return
@@ -38,7 +23,6 @@ export default function TextTab(): React.ReactElement {
     setParsing(true)
     setResult(null)
     setSaveStatus('idle')
-    setConfirmingSave(false)
 
     try {
       // 🧠 Get ML category prediction
@@ -62,7 +46,6 @@ export default function TextTab(): React.ReactElement {
       }
 
       setResult(parsed)
-      setConfirmingSave(true)
       console.log('[TextTab] Parsed expense (awaiting confirmation):', parsed)
 
     } catch (err) {
@@ -106,10 +89,9 @@ export default function TextTab(): React.ReactElement {
         setInput('')
         setResult(null)
         setSaveStatus('idle')
-        setConfirmingSave(false)
       }, 2000)
-    } catch (saveErr) {
-      const errorMsg = saveErr instanceof Error ? saveErr.message : 'Failed to save expense'
+    } catch (err) {
+      const errorMsg = err instanceof Error ? err.message : 'Failed to save expense'
       setSaveStatus('error')
       setSaveError(errorMsg)
       console.error('[TextTab] Error saving expense:', errorMsg)
@@ -118,7 +100,6 @@ export default function TextTab(): React.ReactElement {
 
   const cancelSave = () => {
     setResult(null)
-    setConfirmingSave(false)
     setSaveStatus('idle')
     setSaveError(null)
   }
@@ -172,7 +153,7 @@ export default function TextTab(): React.ReactElement {
           <div className="result-header">📋 Review Your Expense</div>
           {[
             { key: 'Input',    val: result.raw ?? '—', cls: '' },
-            { key: 'Amount',   val: result.amount,     cls: 'amount' },
+            { key: 'Amount',   val: (result as any).amount,     cls: 'amount' },
             { key: 'Category', val: result.category,   cls: 'cat' },
             { key: 'Date',     val: result.date,       cls: '' },
           ].map(({ key, val, cls }) => (
