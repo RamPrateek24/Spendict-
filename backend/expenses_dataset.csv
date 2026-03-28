@@ -1,0 +1,501 @@
+text,category
+Restaurant snack purchase,Food
+Cafe Coffee Day restaurant lunch,Food
+McDonalds snack purchase,Food
+McDonalds burger meal,Food
+Cafe Coffee Day dinner with friends,Food
+Restaurant restaurant bill,Food
+Dominos coffee purchase,Food
+Zomato takeaway order,Food
+Cafe Coffee Day burger meal,Food
+KFC restaurant lunch,Food
+Zomato pizza dinner,Food
+Subway burger meal,Food
+McDonalds coffee purchase,Food
+Cafe Coffee Day dinner with friends,Food
+Zomato late night food,Food
+Subway pizza dinner,Food
+KFC late night food,Food
+Cafe Coffee Day snack purchase,Food
+Pizza Hut takeaway order,Food
+McDonalds snack purchase,Food
+Starbucks coffee purchase,Food
+Restaurant restaurant bill,Food
+Pizza Hut restaurant bill,Food
+Starbucks pizza dinner,Food
+Dominos dinner with friends,Food
+KFC food delivery order,Food
+Pizza Hut late night food,Food
+Pizza Hut restaurant lunch,Food
+KFC restaurant lunch,Food
+Pizza Hut snack purchase,Food
+Subway pizza dinner,Food
+KFC snack purchase,Food
+KFC late night food,Food
+Dominos dinner with friends,Food
+Zomato late night food,Food
+McDonalds coffee purchase,Food
+Subway pizza dinner,Food
+McDonalds restaurant lunch,Food
+Subway snack purchase,Food
+Starbucks snack purchase,Food
+Dominos coffee purchase,Food
+Pizza Hut food delivery order,Food
+Dominos pizza dinner,Food
+Restaurant takeaway order,Food
+Starbucks dinner with friends,Food
+Pizza Hut restaurant bill,Food
+KFC restaurant lunch,Food
+Restaurant snack purchase,Food
+Subway dinner with friends,Food
+Restaurant food delivery order,Food
+Starbucks pizza dinner,Food
+Swiggy takeaway order,Food
+Restaurant food delivery order,Food
+Zomato burger meal,Food
+Zomato snack purchase,Food
+McDonalds restaurant bill,Food
+Restaurant restaurant bill,Food
+Dominos restaurant lunch,Food
+Subway snack purchase,Food
+Cafe Coffee Day takeaway order,Food
+Swiggy snack purchase,Food
+Swiggy coffee purchase,Food
+Auto Stand cab ride home,Transport
+Taxi Service metro ticket,Transport
+Bike Taxi metro ticket,Transport
+Rapido auto ride,Transport
+Bus Service train commute,Transport
+Petrol Pump ride to airport,Transport
+Petrol Pump ride to office,Transport
+Uber bus ticket,Transport
+Rapido bike taxi ride,Transport
+Ola cab ride home,Transport
+Uber bike taxi ride,Transport
+Uber diesel refill,Transport
+Auto Stand cab ride home,Transport
+Taxi Service metro ticket,Transport
+Uber auto ride,Transport
+Taxi Service metro ticket,Transport
+Taxi Service ride to airport,Transport
+Indian Railways ride to airport,Transport
+Metro ride to office,Transport
+Bike Taxi bus ticket,Transport
+Petrol Pump bike taxi ride,Transport
+Bus Service auto ride,Transport
+Indian Railways train commute,Transport
+Bus Service bus ticket,Transport
+Bus Service train commute,Transport
+Ola petrol refill,Transport
+Taxi Service cab ride home,Transport
+Rapido ride to airport,Transport
+Metro bike taxi ride,Transport
+Indian Railways petrol refill,Transport
+Taxi Service metro ticket,Transport
+Rapido bike taxi ride,Transport
+Petrol Pump ride to airport,Transport
+Uber petrol refill,Transport
+Petrol Pump auto ride,Transport
+Ola cab ride home,Transport
+Petrol Pump ride to office,Transport
+Bus Service bus ticket,Transport
+Bike Taxi bike taxi ride,Transport
+Uber diesel refill,Transport
+Metro metro ticket,Transport
+Taxi Service train commute,Transport
+Rapido metro ticket,Transport
+Petrol Pump diesel refill,Transport
+Bus Service ride to airport,Transport
+Bus Service ride to airport,Transport
+Bike Taxi bus ticket,Transport
+Indian Railways metro ticket,Transport
+Bike Taxi bike taxi ride,Transport
+Metro auto ride,Transport
+Ola diesel refill,Transport
+Metro diesel refill,Transport
+Ola petrol refill,Transport
+Taxi Service petrol refill,Transport
+Rapido ride to office,Transport
+Taxi Service ride to airport,Transport
+Bus Service train commute,Transport
+Metro petrol refill,Transport
+Uber bike taxi ride,Transport
+Ola ride to airport,Transport
+Indian Railways auto ride,Transport
+Rapido auto ride,Transport
+Croma electronics purchase,Shopping
+Croma shoes purchase,Shopping
+Flipkart online order,Shopping
+Reliance Trends online order,Shopping
+Croma online order,Shopping
+Shopping Mall fashion purchase,Shopping
+Flipkart shoes purchase,Shopping
+Myntra home items,Shopping
+Vijay Sales mobile purchase,Shopping
+Shopping Mall home items,Shopping
+Croma shopping mall purchase,Shopping
+Ajio clothing purchase,Shopping
+Flipkart clothing purchase,Shopping
+Reliance Trends headphones purchase,Shopping
+Croma shopping mall purchase,Shopping
+Local Store fashion purchase,Shopping
+Vijay Sales headphones purchase,Shopping
+Amazon fashion purchase,Shopping
+Decathlon home items,Shopping
+Reliance Trends fashion purchase,Shopping
+Amazon mobile purchase,Shopping
+Croma fashion purchase,Shopping
+Shopping Mall headphones purchase,Shopping
+Local Store electronics purchase,Shopping
+Amazon shopping mall purchase,Shopping
+Myntra mobile purchase,Shopping
+Croma laptop accessory,Shopping
+Croma fashion purchase,Shopping
+Local Store fashion purchase,Shopping
+Vijay Sales clothing purchase,Shopping
+Reliance Trends fashion purchase,Shopping
+Amazon laptop accessory,Shopping
+Ajio mobile purchase,Shopping
+Flipkart mobile purchase,Shopping
+Myntra electronics purchase,Shopping
+Vijay Sales electronics purchase,Shopping
+Shopping Mall home items,Shopping
+Myntra mobile purchase,Shopping
+Ajio home items,Shopping
+Vijay Sales fashion purchase,Shopping
+Myntra online order,Shopping
+Vijay Sales shoes purchase,Shopping
+Decathlon fashion purchase,Shopping
+Decathlon home items,Shopping
+Myntra shoes purchase,Shopping
+Ajio headphones purchase,Shopping
+Croma mobile purchase,Shopping
+Reliance Trends shoes purchase,Shopping
+Flipkart electronics purchase,Shopping
+Vijay Sales fashion purchase,Shopping
+Shopping Mall electronics purchase,Shopping
+Vijay Sales headphones purchase,Shopping
+Ajio shoes purchase,Shopping
+Vijay Sales electronics purchase,Shopping
+Flipkart headphones purchase,Shopping
+Croma mobile purchase,Shopping
+Croma home items,Shopping
+Amazon fashion purchase,Shopping
+Myntra shopping mall purchase,Shopping
+Ajio headphones purchase,Shopping
+Myntra shopping mall purchase,Shopping
+Reliance Trends shoes purchase,Shopping
+Local Grocery vegetable market shopping,Groceries
+BigBasket vegetables purchase,Groceries
+Vegetable Market grocery shopping,Groceries
+Vegetable Market vegetables purchase,Groceries
+Spencer household groceries,Groceries
+DMart monthly groceries,Groceries
+Fruit Market monthly groceries,Groceries
+Reliance Fresh vegetable market shopping,Groceries
+More Store fruit market purchase,Groceries
+Spencer weekly groceries,Groceries
+Vegetable Market kitchen supplies,Groceries
+Vegetable Market fruits purchase,Groceries
+Grocery Shop vegetables purchase,Groceries
+Reliance Fresh kitchen supplies,Groceries
+Grocery Shop kitchen supplies,Groceries
+Vegetable Market vegetable market shopping,Groceries
+More Store weekly groceries,Groceries
+More Store fruits purchase,Groceries
+Local Grocery vegetable market shopping,Groceries
+Supermarket fruits purchase,Groceries
+Reliance Fresh household groceries,Groceries
+Fruit Market household groceries,Groceries
+DMart fruit market purchase,Groceries
+Fruit Market weekly groceries,Groceries
+Local Grocery grocery shopping,Groceries
+Fruit Market monthly groceries,Groceries
+Local Grocery weekly groceries,Groceries
+Grocery Shop weekly groceries,Groceries
+Supermarket kitchen supplies,Groceries
+Spencer grocery shopping,Groceries
+Supermarket fruits purchase,Groceries
+Reliance Fresh weekly groceries,Groceries
+Supermarket monthly groceries,Groceries
+BigBasket fruit market purchase,Groceries
+Local Grocery monthly groceries,Groceries
+Fruit Market monthly groceries,Groceries
+DMart supermarket groceries,Groceries
+BigBasket fruit market purchase,Groceries
+Supermarket kitchen supplies,Groceries
+Fruit Market grocery shopping,Groceries
+More Store weekly groceries,Groceries
+Reliance Fresh vegetables purchase,Groceries
+Spencer monthly groceries,Groceries
+BigBasket monthly groceries,Groceries
+More Store fruits purchase,Groceries
+Reliance Fresh vegetable market shopping,Groceries
+Grocery Shop supermarket groceries,Groceries
+Grocery Shop supermarket groceries,Groceries
+Fruit Market fruits purchase,Groceries
+Local Grocery weekly groceries,Groceries
+Reliance Fresh vegetables purchase,Groceries
+Vegetable Market supermarket groceries,Groceries
+More Store fruits purchase,Groceries
+Grocery Shop supermarket groceries,Groceries
+More Store monthly groceries,Groceries
+DMart vegetable market shopping,Groceries
+DMart vegetables purchase,Groceries
+More Store household groceries,Groceries
+Spencer weekly groceries,Groceries
+Grocery Shop grocery shopping,Groceries
+Vegetable Market fruits purchase,Groceries
+Reliance Fresh vegetables purchase,Groceries
+BookMyShow theatre ticket,Entertainment
+Amazon Prime concert ticket,Entertainment
+Netflix gaming purchase,Entertainment
+YouTube Premium movie ticket booking,Entertainment
+Netflix movie night ticket,Entertainment
+INOX music subscription,Entertainment
+INOX movie night ticket,Entertainment
+BookMyShow movie night ticket,Entertainment
+Spotify music subscription,Entertainment
+PVR theatre ticket,Entertainment
+Gaming Store cinema ticket,Entertainment
+Gaming Store entertainment subscription,Entertainment
+YouTube Premium OTT subscription,Entertainment
+Netflix entertainment subscription,Entertainment
+Amazon Prime gaming purchase,Entertainment
+BookMyShow movie ticket booking,Entertainment
+PVR music subscription,Entertainment
+Gaming Store movie night ticket,Entertainment
+Cinema Hall cinema ticket,Entertainment
+Cinema Hall music subscription,Entertainment
+Cinema Hall concert ticket,Entertainment
+Netflix music subscription,Entertainment
+Amazon Prime OTT subscription,Entertainment
+Spotify theatre ticket,Entertainment
+BookMyShow cinema ticket,Entertainment
+Hotstar movie night ticket,Entertainment
+YouTube Premium cinema ticket,Entertainment
+Cinema Hall OTT subscription,Entertainment
+Hotstar movie ticket booking,Entertainment
+BookMyShow gaming purchase,Entertainment
+Netflix cinema ticket,Entertainment
+Gaming Store gaming purchase,Entertainment
+YouTube Premium gaming purchase,Entertainment
+Amazon Prime movie ticket booking,Entertainment
+Netflix music subscription,Entertainment
+Amazon Prime movie night ticket,Entertainment
+Amazon Prime streaming subscription,Entertainment
+INOX movie ticket booking,Entertainment
+Spotify theatre ticket,Entertainment
+Cinema Hall theatre ticket,Entertainment
+Hotstar theatre ticket,Entertainment
+Hotstar entertainment subscription,Entertainment
+Cinema Hall cinema ticket,Entertainment
+INOX entertainment subscription,Entertainment
+Netflix cinema ticket,Entertainment
+Amazon Prime theatre ticket,Entertainment
+PVR music subscription,Entertainment
+YouTube Premium movie ticket booking,Entertainment
+Hotstar streaming subscription,Entertainment
+Hotstar streaming subscription,Entertainment
+YouTube Premium OTT subscription,Entertainment
+Cinema Hall movie night ticket,Entertainment
+PVR OTT subscription,Entertainment
+Hotstar movie ticket booking,Entertainment
+Gaming Store movie ticket booking,Entertainment
+Netflix gaming purchase,Entertainment
+INOX cinema ticket,Entertainment
+Hotstar theatre ticket,Entertainment
+Cinema Hall gaming purchase,Entertainment
+Hotstar concert ticket,Entertainment
+Spotify concert ticket,Entertainment
+Amazon Prime gaming purchase,Entertainment
+Wellness Store medical supplies,Health
+Apollo Pharmacy hospital bill,Health
+Diagnostic Center medical test,Health
+Wellness Store medicine purchase,Health
+Health Store health checkup,Health
+Hospital medical supplies,Health
+Clinic medical test,Health
+Diagnostic Center pharmacy purchase,Health
+Medical Shop hospital bill,Health
+Clinic health products,Health
+Pharmacy medicine purchase,Health
+Hospital clinic visit,Health
+Diagnostic Center hospital bill,Health
+Hospital medicine purchase,Health
+Health Store pharmacy purchase,Health
+Apollo Pharmacy medicine purchase,Health
+Wellness Store doctor consultation,Health
+Clinic clinic visit,Health
+Medical Shop pharmacy purchase,Health
+Diagnostic Center medicine refill,Health
+Health Store clinic visit,Health
+Doctor Clinic doctor consultation,Health
+Apollo Pharmacy medicine purchase,Health
+Pharmacy doctor consultation,Health
+Wellness Store pharmacy purchase,Health
+Wellness Store medical test,Health
+Doctor Clinic clinic visit,Health
+Diagnostic Center medical test,Health
+Hospital doctor consultation,Health
+MedPlus medical test,Health
+Doctor Clinic medical test,Health
+Medical Shop health products,Health
+Hospital health checkup,Health
+Hospital doctor consultation,Health
+MedPlus doctor consultation,Health
+Medical Shop health checkup,Health
+Wellness Store medical test,Health
+Hospital health products,Health
+Doctor Clinic health checkup,Health
+Clinic medicine purchase,Health
+Diagnostic Center medical test,Health
+Wellness Store medical test,Health
+MedPlus medical supplies,Health
+Apollo Pharmacy health products,Health
+MedPlus medicine purchase,Health
+Diagnostic Center medical supplies,Health
+Health Store health checkup,Health
+Doctor Clinic medical test,Health
+Diagnostic Center medicine refill,Health
+Apollo Pharmacy pharmacy purchase,Health
+Apollo Pharmacy medical supplies,Health
+Wellness Store health checkup,Health
+Wellness Store hospital bill,Health
+Clinic medical supplies,Health
+Doctor Clinic doctor consultation,Health
+Apollo Pharmacy medical supplies,Health
+Health Store medicine purchase,Health
+Diagnostic Center health products,Health
+MedPlus medical test,Health
+Health Store medicine purchase,Health
+Medical Shop medical test,Health
+Pharmacy pharmacy purchase,Health
+Utility Payment electricity bill payment,Bills
+Utility Payment internet bill,Bills
+Internet Provider water bill payment,Bills
+Internet Provider monthly bill,Bills
+Gas Agency electricity bill payment,Bills
+Water Board broadband recharge,Bills
+Broadband phone bill,Bills
+Gas Agency data recharge,Bills
+Utility Payment data recharge,Bills
+Gas Agency internet bill,Bills
+Jio monthly bill,Bills
+Electricity Board phone bill,Bills
+Jio broadband recharge,Bills
+Vodafone data recharge,Bills
+Gas Agency data recharge,Bills
+Airtel internet bill,Bills
+Jio water bill payment,Bills
+Gas Agency water bill payment,Bills
+Electricity Board monthly bill,Bills
+Internet Provider phone bill,Bills
+Gas Agency mobile recharge,Bills
+Electricity Board mobile recharge,Bills
+Electricity Board internet bill,Bills
+Broadband monthly bill,Bills
+Jio monthly bill,Bills
+Mobile Recharge gas bill payment,Bills
+Vodafone internet bill,Bills
+Gas Agency utility bill,Bills
+Utility Payment monthly bill,Bills
+Utility Payment gas bill payment,Bills
+Vodafone monthly bill,Bills
+Mobile Recharge mobile recharge,Bills
+Mobile Recharge electricity bill payment,Bills
+Jio phone bill,Bills
+Broadband broadband recharge,Bills
+Airtel phone bill,Bills
+Gas Agency internet bill,Bills
+Electricity Board mobile recharge,Bills
+Jio mobile recharge,Bills
+Mobile Recharge monthly bill,Bills
+Jio internet bill,Bills
+Jio mobile recharge,Bills
+Gas Agency electricity bill payment,Bills
+Utility Payment mobile recharge,Bills
+Broadband data recharge,Bills
+Internet Provider phone bill,Bills
+Gas Agency broadband recharge,Bills
+Utility Payment electricity bill payment,Bills
+Jio monthly bill,Bills
+Mobile Recharge mobile recharge,Bills
+Airtel phone bill,Bills
+Electricity Board electricity bill payment,Bills
+Water Board mobile recharge,Bills
+Internet Provider utility bill,Bills
+Gas Agency internet bill,Bills
+Mobile Recharge internet bill,Bills
+Electricity Board data recharge,Bills
+Broadband mobile recharge,Bills
+Water Board internet bill,Bills
+Jio utility bill,Bills
+Electricity Board broadband recharge,Bills
+Vodafone electricity bill payment,Bills
+RedBus holiday travel,Travel
+Travel Agency tour booking,Travel
+RedBus tour booking,Travel
+Hotel Booking train ticket booking,Travel
+Goibibo flight ticket booking,Travel
+Yatra train ticket booking,Travel
+Goibibo flight ticket booking,Travel
+IRCTC train ticket booking,Travel
+Goibibo travel reservation,Travel
+Goibibo trip booking,Travel
+Yatra tour booking,Travel
+Air India vacation travel,Travel
+IndiGo travel booking,Travel
+Goibibo train ticket booking,Travel
+IRCTC holiday travel,Travel
+Goibibo travel reservation,Travel
+Hotel Booking trip booking,Travel
+MakeMyTrip hotel booking,Travel
+IndiGo train ticket booking,Travel
+IndiGo bus ticket booking,Travel
+Travel Agency tour booking,Travel
+Hotel Booking train ticket booking,Travel
+IRCTC train ticket booking,Travel
+MakeMyTrip trip booking,Travel
+OYO train ticket booking,Travel
+Yatra trip booking,Travel
+MakeMyTrip vacation travel,Travel
+IRCTC travel booking,Travel
+OYO travel reservation,Travel
+Travel Agency holiday travel,Travel
+Hotel Booking trip booking,Travel
+MakeMyTrip flight ticket booking,Travel
+Yatra flight ticket booking,Travel
+IRCTC travel reservation,Travel
+Hotel Booking bus ticket booking,Travel
+OYO vacation travel,Travel
+Air India bus ticket booking,Travel
+IRCTC bus ticket booking,Travel
+MakeMyTrip travel reservation,Travel
+RedBus bus ticket booking,Travel
+IndiGo train ticket booking,Travel
+Air India train ticket booking,Travel
+Yatra travel booking,Travel
+Travel Agency travel reservation,Travel
+Hotel Booking travel reservation,Travel
+RedBus tour booking,Travel
+Goibibo hotel booking,Travel
+OYO train ticket booking,Travel
+OYO holiday travel,Travel
+RedBus bus ticket booking,Travel
+MakeMyTrip holiday travel,Travel
+Travel Agency trip booking,Travel
+Yatra travel booking,Travel
+Travel Agency holiday travel,Travel
+MakeMyTrip vacation travel,Travel
+IRCTC flight ticket booking,Travel
+Hotel Booking hotel booking,Travel
+MakeMyTrip travel reservation,Travel
+Yatra travel reservation,Travel
+Yatra hotel booking,Travel
+IRCTC flight ticket booking,Travel
+Air India holiday travel,Travel
+Airtel phone bill,Bills
+Auto Stand petrol refill,Transport
+Shopping Mall mobile purchase,Shopping
+KFC food delivery order,Food
