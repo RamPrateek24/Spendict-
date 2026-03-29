@@ -1,2 +1,5 @@
+# This file is used locally only
+# Vercel uses api/requirements.txt for serverless functions
 joblib==1.3.2
-scikit-learn==1.3.2
+scikit-learn==1.5.1
+
