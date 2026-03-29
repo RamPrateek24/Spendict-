@@ -1,8 +1,0 @@
-{
-  "buildCommand": "npm install && npm run build",
-  "outputDirectory": "dist",
-  "env": {
-    "PYTHONPATH": ".",
-    "PYTHONUNBUFFERED": "1"
-  }
-}
