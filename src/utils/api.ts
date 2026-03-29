@@ -20,7 +20,8 @@ export async function authenticatedFetch(
       throw new Error('User not authenticated')
     }
 
-    const response = await fetch(`http://localhost:8000${endpoint}`, {
+    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+    const response = await fetch(`${apiUrl}${endpoint}`, {
       method,
       headers: {
         'Content-Type': 'application/json',
