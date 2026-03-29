@@ -45,6 +45,10 @@ def load_models():
 # Load models on startup
 load_models()
 
+@app.get("/")
+def root():
+    return {"message": "Spendict API", "models_loaded": model is not None}
+
 @app.get("/health")
 def health():
     return {"status": "ok", "models_loaded": model is not None}
