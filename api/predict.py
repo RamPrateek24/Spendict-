@@ -1,19 +1,6 @@
-from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
+import json
 import joblib
-import os
 from pathlib import Path
-
-app = FastAPI()
-
-# Allow requests from React
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 
 # Get the directory where this script is located
 api_dir = Path(__file__).parent.parent / "backend"
@@ -28,23 +15,79 @@ except FileNotFoundError as e:
     vectorizer = None
 
 
-@app.post("/predict")
-def predict(data: dict):
-    if model is None or vectorizer is None:
-        return {"error": "Model not loaded"}
+def handler(request):
+    """Vercel serverless function handler"""
     
-    text = data.get("text", "")
-    if not text:
-        return {"error": "No text provided"}
-
-    try:
-        X = vectorizer.transform([text])
-        category = model.predict(X)[0]
-        return {"category": category}
-    except Exception as e:
-        return {"error": str(e)}
-
-
-@app.get("/health")
-def health():
-    return {"status": "ok"}
+    # Handle CORS
+    if request.method == "OPTIONS":
+        return {
+            "statusCode": 200,
+            "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "POST, GET, OPTIONS",
+                "Access-Control-Allow-Headers": "Content-Type, Authorization",
+            },
+        }
+    
+    # Handle GET /health
+    if request.method == "GET":
+        return {
+            "statusCode": 200,
+            "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Content-Type": "application/json",
+            },
+            "body": json.dumps({"status": "ok"}),
+        }
+    
+    # Handle POST /predict
+    if request.method == "POST":
+        try:
+            body = json.loads(request.body)
+            text = body.get("text", "")
+            
+            if not text:
+                return {
+                    "statusCode": 400,
+                    "headers": {
+                        "Access-Control-Allow-Origin": "*",
+                        "Content-Type": "application/json",
+                    },
+                    "body": json.dumps({"error": "No text provided"}),
+                }
+            
+            if model is None or vectorizer is None:
+                return {
+                    "statusCode": 500,
+                    "headers": {
+                        "Access-Control-Allow-Origin": "*",
+                        "Content-Type": "application/json",
+                    },
+                    "body": json.dumps({"error": "Model not loaded"}),
+                }
+            
+            X = vectorizer.transform([text])
+            category = model.predict(X)[0]
+            
+            return {
+                "statusCode": 200,
+                "headers": {
+                    "Access-Control-Allow-Origin": "*",
+                    "Content-Type": "application/json",
+                },
+                "body": json.dumps({"category": category}),
+            }
+        except Exception as e:
+            return {
+                "statusCode": 500,
+                "headers": {
+                    "Access-Control-Allow-Origin": "*",
+                    "Content-Type": "application/json",
+                },
+                "body": json.dumps({"error": str(e)}),
+            }
+    
+    return {
+        "statusCode": 405,
+        "body": json.dumps({"error": "Method not allowed"}),
+    }

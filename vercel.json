@@ -1,12 +1,19 @@
 {
   "buildCommand": "npm install && npm run build",
   "outputDirectory": "dist",
-  "env": {
-    "VITE_API_URL": "@vite_api_url"
-  },
   "functions": {
     "api/**/*.py": {
       "runtime": "python3.11"
     }
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/api/predict",
+      "destination": "/api/predict.py"
+    },
+    {
+      "source": "/api/health",
+      "destination": "/api/predict.py"
+    }
+  ]
 }
