@@ -27,16 +27,51 @@ vectorizer = None
 def load_models():
     global model, vectorizer
     try:
-        print(f"Loading models from: {script_dir}", file=sys.stderr)
-        model_path = script_dir / "expense_model.pkl"
-        vectorizer_path = script_dir / "vectorizer.pkl"
+        print(f"Current working directory: {os.getcwd()}", file=sys.stderr)
+        print(f"Script directory: {script_dir}", file=sys.stderr)
+        print(f"Script file: {__file__}", file=sys.stderr)
         
-        print(f"Model path: {model_path} (exists: {model_path.exists()})", file=sys.stderr)
-        print(f"Vectorizer path: {vectorizer_path} (exists: {vectorizer_path.exists()})", file=sys.stderr)
+        # Try different possible paths
+        possible_paths = [
+            script_dir / "expense_model.pkl",
+            Path('backend') / "expense_model.pkl",
+            Path('./backend') / "expense_model.pkl",
+        ]
+        
+        model_path = None
+        for path in possible_paths:
+            if path.exists():
+                model_path = path
+                print(f"Found model at: {model_path}", file=sys.stderr)
+                break
+        
+        if model_path is None:
+            print(f"Model not found in any of: {possible_paths}", file=sys.stderr)
+            model_path = script_dir / "expense_model.pkl"  # Use default for error message
+        
+        possible_vectorizer_paths = [
+            script_dir / "vectorizer.pkl",
+            Path('backend') / "vectorizer.pkl",
+            Path('./backend') / "vectorizer.pkl",
+        ]
+        
+        vectorizer_path = None
+        for path in possible_vectorizer_paths:
+            if path.exists():
+                vectorizer_path = path
+                print(f"Found vectorizer at: {vectorizer_path}", file=sys.stderr)
+                break
+        
+        if vectorizer_path is None:
+            print(f"Vectorizer not found in any of: {possible_vectorizer_paths}", file=sys.stderr)
+            vectorizer_path = script_dir / "vectorizer.pkl"  # Use default for error message
+        
+        print(f"Loading model from: {model_path}", file=sys.stderr)
+        print(f"Loading vectorizer from: {vectorizer_path}", file=sys.stderr)
         
         model = joblib.load(model_path)
         vectorizer = joblib.load(vectorizer_path)
-        print("Models loaded successfully!", file=sys.stderr)
+        print("✓ Models loaded successfully!", file=sys.stderr)
     except Exception as e:
         print(f"ERROR loading models: {e}", file=sys.stderr)
         import traceback
