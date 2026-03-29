@@ -1,14 +1,4 @@
 {
   "buildCommand": "npm install && npm run build",
-  "outputDirectory": "dist",
-  "rewrites": [
-    {
-      "source": "/api/predict",
-      "destination": "/api/predict.py"
-    },
-    {
-      "source": "/api/health", 
-      "destination": "/api/predict.py"
-    }
-  ]
+  "outputDirectory": "dist"
 }

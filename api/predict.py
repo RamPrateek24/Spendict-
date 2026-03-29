@@ -1,6 +1,7 @@
 import json
 import joblib
 from pathlib import Path
+from http.server import BaseHTTPRequestHandler
 
 # Get the directory where this script is located
 api_dir = Path(__file__).parent.parent / "backend"
@@ -15,79 +16,51 @@ except FileNotFoundError as e:
     vectorizer = None
 
 
-def handler(request):
-    """Vercel serverless function handler"""
-    
-    # Handle CORS
-    if request.method == "OPTIONS":
-        return {
-            "statusCode": 200,
-            "headers": {
-                "Access-Control-Allow-Origin": "*",
-                "Access-Control-Allow-Methods": "POST, GET, OPTIONS",
-                "Access-Control-Allow-Headers": "Content-Type, Authorization",
-            },
-        }
-    
-    # Handle GET /health
-    if request.method == "GET":
-        return {
-            "statusCode": 200,
-            "headers": {
-                "Access-Control-Allow-Origin": "*",
-                "Content-Type": "application/json",
-            },
-            "body": json.dumps({"status": "ok"}),
-        }
-    
-    # Handle POST /predict
-    if request.method == "POST":
+class handler(BaseHTTPRequestHandler):
+    def do_POST(self):
+        """Handle POST requests"""
+        
+        # Set CORS headers
+        self.send_response(200)
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.send_header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS')
+        self.send_header('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+        self.send_header('Content-Type', 'application/json')
+        self.end_headers()
+        
         try:
-            body = json.loads(request.body)
-            text = body.get("text", "")
+            content_length = int(self.headers.get('Content-Length', 0))
+            body = self.rfile.read(content_length)
+            data = json.loads(body)
+            text = data.get("text", "")
             
             if not text:
-                return {
-                    "statusCode": 400,
-                    "headers": {
-                        "Access-Control-Allow-Origin": "*",
-                        "Content-Type": "application/json",
-                    },
-                    "body": json.dumps({"error": "No text provided"}),
-                }
+                self.wfile.write(json.dumps({"error": "No text provided"}).encode())
+                return
             
             if model is None or vectorizer is None:
-                return {
-                    "statusCode": 500,
-                    "headers": {
-                        "Access-Control-Allow-Origin": "*",
-                        "Content-Type": "application/json",
-                    },
-                    "body": json.dumps({"error": "Model not loaded"}),
-                }
+                self.wfile.write(json.dumps({"error": "Model not loaded"}).encode())
+                return
             
             X = vectorizer.transform([text])
             category = model.predict(X)[0]
             
-            return {
-                "statusCode": 200,
-                "headers": {
-                    "Access-Control-Allow-Origin": "*",
-                    "Content-Type": "application/json",
-                },
-                "body": json.dumps({"category": category}),
-            }
+            self.wfile.write(json.dumps({"category": category}).encode())
         except Exception as e:
-            return {
-                "statusCode": 500,
-                "headers": {
-                    "Access-Control-Allow-Origin": "*",
-                    "Content-Type": "application/json",
-                },
-                "body": json.dumps({"error": str(e)}),
-            }
+            self.wfile.write(json.dumps({"error": str(e)}).encode())
     
-    return {
-        "statusCode": 405,
-        "body": json.dumps({"error": "Method not allowed"}),
-    }
+    def do_GET(self):
+        """Handle GET requests"""
+        self.send_response(200)
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.send_header('Content-Type', 'application/json')
+        self.end_headers()
+        self.wfile.write(json.dumps({"status": "ok"}).encode())
+    
+    def do_OPTIONS(self):
+        """Handle CORS preflight"""
+        self.send_response(200)
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.send_header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS')
+        self.send_header('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+        self.end_headers()
